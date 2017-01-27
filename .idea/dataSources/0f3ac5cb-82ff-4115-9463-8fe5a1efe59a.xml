@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="basket@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="basket">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="baloncesto2"/>
+    <schema id="4" parent="1" name="basquet"/>
+    <schema id="5" parent="1" name="dam_gym"/>
+    <schema id="6" parent="1" name="dam_stukea"/>
+    <schema id="7" parent="1" name="ENEMIGOS"/>
+    <schema id="8" parent="1" name="incidencias"/>
+    <schema id="9" parent="1" name="information_schema"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="objetos"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="phpmyadmin"/>
+    <schema id="14" parent="1" name="RECURSOS"/>
+    <schema id="15" parent="1" name="restaurant"/>
+    <schema id="16" parent="1" name="riders"/>
+    <schema id="17" parent="1" name="SUPERVIVIENTES"/>
+    <schema id="18" parent="1" name="test"/>
+    <schema id="19" parent="1" name="thepippersbbdd"/>
+    <schema id="20" parent="1" name="what2watch"/>
+    <table id="21" parent="2" name="player"/>
+    <table id="22" parent="2" name="team"/>
+    <column id="23" parent="21" name="name">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="21" name="birth">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="21" name="nbaskets">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="26" parent="21" name="nassists">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="27" parent="21" name="nrebounds">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="28" parent="21" name="position">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="29" parent="21" name="team">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <index id="30" parent="21" name="fk_player_1_idx">
+      <ColNames>team</ColNames>
+    </index>
+    <key id="31" parent="21" name="PRIMARY">
+      <ColNames>name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="21" name="fk_player_1">
+      <ColNames>team</ColNames>
+      <RefSchemaName>basket</RefSchemaName>
+      <RefTableName>team</RefTableName>
+      <RefColNames>name</RefColNames>
+      <OnUpdate>update</OnUpdate>
+    </foreign-key>
+    <column id="33" parent="22" name="name">
+      <Position>1</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="22" name="city">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="22" name="creation">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="36" parent="22" name="PRIMARY">
+      <ColNames>name</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
